@@ -1,10 +1,14 @@
 {
-  "name": "targets",
+  "name": "hmnp-comopare",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "run-s clean build serve",
+    "clean": "rimraf dist",
+    "build": "cross-env NODE_ENV=\"development\" webpack --progress",
+    "serve": "electron ."
   },
   "keywords": [],
   "author": "",
